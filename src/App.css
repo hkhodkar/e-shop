@@ -1,4 +1,9 @@
-:root {
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
     --orange-color: #ff9f00;
     --white-color: white;
     --black-color: #131921
