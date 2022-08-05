@@ -10,10 +10,11 @@ const Checkout = (props) => {
         <img
           src={process.env.PUBLIC_URL + "/img/checkout/checkout-add.jpg"}
           alt="checkout-add"
-          className="checkout__ad"
+          className="checkout__add"
         />
         <div>
           <h2 className="checkout__title">Your Shopping Basket</h2>
+          <CheckoutProduct />
           <CheckoutProduct />
         </div>
       </div>
