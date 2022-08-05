@@ -13,7 +13,7 @@ const Home = () => {
 
         <div className="home__row">
           <Product
-            id={112233}
+            id={"112233"}
             title={
               "Bennett Mystic 15.6 inch Laptop Shoulder Messenger Sling Office Bag, Water Repellent Fabric for Men and Women (Blue)"
             }

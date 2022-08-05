@@ -9,7 +9,8 @@ const Product = (props) => {
       type: "ADD_TO_BASKET",
       item: {
         id: props.id,
-        image: props.image,
+        title:props.title,
+        imgageSrc: props.img,
         price: props.price,
         rating: props.rating,
       },

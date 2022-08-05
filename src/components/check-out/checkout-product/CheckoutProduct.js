@@ -4,21 +4,23 @@ const CheckoutProduct = (props) => {
   return (
     <div className="checkout-product">
       <img
-        src={process.env.PUBLIC_URL + "/img/products/bag.jpg"}
+        src={props.src}
         alt="checkout-product"
         className="checkout-product__image"
       />
       <div className="checkout-product__info">
-        <p className="checkout-product__title">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
-          laboriosam dolor voluptatum harum ex animi temporibus eius accusantium
-          voluptate, quidem alias exercitationem illum!
-        </p>
+        <p className="checkout-product__title">{props.title}</p>
         <p className="checkout-product__price">
           <small>$</small>
-          <strong>99.99</strong>
+          <strong>{props.price}</strong>
         </p>
-        <div className="checkout-product__rating">⭐⭐</div>
+        <div className="checkout-product__rating">
+          {Array(props.rating)
+            .fill()
+            .map((_, i) => (
+              <span>⭐</span>
+            ))}
+        </div>
         <button>Remove From Basket</button>
       </div>
     </div>
