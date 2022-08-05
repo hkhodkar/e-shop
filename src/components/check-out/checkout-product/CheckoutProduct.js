@@ -1,6 +1,16 @@
 import "./CheckoutProduct.css";
+import { useStateValue } from "../../../providers/StateProvider";
 
 const CheckoutProduct = (props) => {
+  const [state, dispatch] = useStateValue();
+
+  const omRemoveItem = () => {
+    dispatch({
+      type: "DELETE_FROM_BASKET",
+      id: props.id,
+    });
+  };
+
   return (
     <div className="checkout-product">
       <img
@@ -21,7 +31,7 @@ const CheckoutProduct = (props) => {
               <span>⭐</span>
             ))}
         </div>
-        <button>Remove From Basket</button>
+        <button onClick={omRemoveItem}>Remove From Basket</button>
       </div>
     </div>
   );

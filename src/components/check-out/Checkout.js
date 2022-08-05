@@ -19,6 +19,7 @@ const Checkout = (props) => {
           {basket.map((item) => (
             <CheckoutProduct
               key={item.id}
+              id={item.id}
               src={item.imgageSrc}
               title={item.title}
               price={item.price}
@@ -35,4 +36,3 @@ const Checkout = (props) => {
 };
 
 export default Checkout;
-
